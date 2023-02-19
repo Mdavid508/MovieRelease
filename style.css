@@ -1,3 +1,8 @@
 .container-m{
     max-width: 600px;
 }
+
+.display-error{
+    color: red;
+    display: none;
+}
