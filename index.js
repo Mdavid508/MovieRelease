@@ -141,8 +141,8 @@ document.getElementById('movie-list').addEventListener('click', (e)=>{
     UI.deleteMovie(e.target);
 
     //remove movie from Store
-    Store.removeMovie(e.target.parentElement.firstChild.textContent);
-    console.log(e.target.parentElement.firstChild.textContent);
+    Store.removeMovie(e.target.parentElement.firstElementChild.textContent);
+    console.log(e.target.parentElement.firstElementChild.textContent);
     
     //show success message
     UI.showAlert("Book Removed successfully", 'success');
