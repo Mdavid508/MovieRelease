@@ -66,20 +66,23 @@ class UI{
     }
 }
 
-//Store Class: Handle the storing of Movies Name //this means the local storage.
+//Store Class: Handle the storing by adding them to the local storage
+//Deleting movies from the local storage
+ //this means the local storage.
 class Store{
-    //getmovie method
+    //get movie method
     static getMovies(){
         let movies;
         if(localStorage.getItem('movies') === null){
-          movies = [];  
+          movies = [];  //if the movies list is empty create an array.
         }else{
-            movies = JSON.parse(localStorage.getItem('movies'));
+            movies = JSON.parse(localStorage.getItem('movies')); //else if it is not empty you return the values in the local storage 
+                                                                //in this case only the value excluding the key
         }
         return movies;
     }
 
-    //Addmovie method
+    //Add movie method
     static addMovie(movie){
         const movies = Store.getMovies();
 
